@@ -1,0 +1,27 @@
+{
+  "name": "Flutter Dev Container",
+  "image": "clocktale-app:latest",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "dart-code.flutter",
+        "dart-code.dart-code",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-containers"
+      ]
+    }
+  },
+  "remoteUser": "flutteruser",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached",
+    "source=${localEnv:USERPROFILE}/.ssh,target=/home/flutteruser/.ssh,type=bind,consistency=cached"
+  ],
+  "remoteEnv": {
+    "PATH": "/home/flutteruser/.pub-cache/bin:${containerEnv:PATH}"
+  },
+  "postStartCommand": "chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_ed25519"
+}

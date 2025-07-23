@@ -62,3 +62,4 @@ RUN dart pub global activate fvm
 ENV PATH=$PATH:$HOME/.pub-cache/bin
 
 RUN fvm install 3.32.7 && fvm global 3.32.7
+ENV PATH=$PATH:$HOME/fvm/default/bin

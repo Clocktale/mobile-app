@@ -11,7 +11,9 @@
         "dart-code.flutter",
         "dart-code.dart-code",
         "ms-azuretools.vscode-docker",
-        "ms-vscode-remote.remote-containers"
+        "ms-vscode-remote.remote-containers",
+        "eamodio.gitlens",
+        "dzhavat.bracket-pair-toggler"
       ]
     }
   },
@@ -22,6 +24,5 @@
   ],
   "remoteEnv": {
     "PATH": "/home/flutteruser/.pub-cache/bin:${containerEnv:PATH}"
-  },
-  "postStartCommand": "chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_ed25519"
+  }
 }

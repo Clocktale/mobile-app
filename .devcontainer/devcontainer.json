@@ -23,6 +23,7 @@
     "source=${localEnv:USERPROFILE}/.ssh,target=/home/flutteruser/.ssh,type=bind,consistency=cached"
   ],
   "remoteEnv": {
-    "PATH": "/home/flutteruser/.pub-cache/bin:${containerEnv:PATH}"
+    "PATH": "/home/flutteruser/.pub-cache/bin:${containerEnv:PATH}",
+    "ANDROID_ADB_SERVER_ADDRESS": "host.docker.internal"
   }
 }

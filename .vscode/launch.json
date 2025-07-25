@@ -1,0 +1,33 @@
+{
+    "versions": "1.0.0",
+    "configurations": [
+        {
+            "name": "Run Flutter App",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "flutterMode": "${input:pickBuildType}",
+        }
+    ],
+    "inputs": [
+        {
+            "id": "pickBuildType",
+            "description": "Choose the build type to run the app",
+            "type": "pickString",
+            "options": [
+                {
+                    "label": "debug",
+                    "value": "debug"
+                },
+                {
+                    "label": "profile",
+                    "value": "profile"
+                },
+                {
+                    "label": "release",
+                    "value": "release"
+                },
+            ]
+        },
+    ]
+}
